@@ -3,18 +3,9 @@ const translations = {
         "page-title": "Milk Run - ร้านนมสไตล์วัยรุ่น",
         "hero-headline": "เติมความหวาน แวะมาจอยกันที่ <span>Milk Run!</span>",
         "hero-subheadline": "ร้านนมนั่งชิล บรรยากาศสุดคิวท์ ขนมอร่อย เครื่องดื่มจัดเต็ม ชวนแก๊งเพื่อนมาได้เลย 💖",
-        "cta-button": "ดูเมนูแนะนำ <i class='fas fa-arrow-down'></i>",
+        "cta-button": "ดูบรรยากาศร้าน <i class='fas fa-arrow-down'></i>",
         "vibe-title": "📸 มุมถ่ายรูปสุดปัง นั่งชิลได้ยาวๆ",
         "vibe-desc": "บรรยากาศร้านสีพาสเทลสุดละมุน ถ่ายรูปมุมไหนก็รอด ชวนเพื่อนมาจอยกันได้เลย!",
-        "menu-title": "🥛 เมนูแนะนำที่ต้องลอง!",
-        "menu-desc": "จัดเต็มความอร่อย ทั้งเครื่องดื่ม ขนมปังปิ้ง และของหวานอีกเพียบ",
-        "menu-1": "ปังปิ้งช็อกโกแลต",
-        "menu-2": "ของทอดทานเล่น",
-        "menu-3": "ปังปิ้งแยมส้ม",
-        "menu-4": "ปังเย็นนมชมพู",
-        "menu-5": "เฟรนช์ฟรายส์",
-        "menu-6": "นมชมพูเย็น",
-        "menu-7": "ปังปิ้งภูเขาไฟ",
         "footer-desc": "ร้านนมนั่งชิล ฟีลวัยรุ่น",
         "footer-time-title": "<i class='fas fa-clock'></i> เวลาเปิด-ปิด",
         "footer-time-desc": "เปิดให้บริการทุกวัน<br>16:00 - 23:00 น.",
@@ -27,18 +18,9 @@ const translations = {
         "page-title": "Milk Run - Teen Style Cafe",
         "hero-headline": "Add some sweetness, come join us at <span>Milk Run!</span>",
         "hero-subheadline": "Chill cafe with cute vibes, delicious desserts, and full-on drinks. Bring your friends! 💖",
-        "cta-button": "See our menu <i class='fas fa-arrow-down'></i>",
+        "cta-button": "See our vibe <i class='fas fa-arrow-down'></i>",
         "vibe-title": "📸 Awesome photo spots, chill all day long",
         "vibe-desc": "Pastel colored vibes, every angle is photogenic. Come hang out with friends!",
-        "menu-title": "🥛 Must-try recommended menu!",
-        "menu-desc": "Full of deliciousness, including drinks, toasts, and many more desserts.",
-        "menu-1": "Chocolate Toast",
-        "menu-2": "Fried Snacks",
-        "menu-3": "Orange Jam Toast",
-        "menu-4": "Pink Milk Shaved Ice",
-        "menu-5": "French Fries",
-        "menu-6": "Iced Pink Milk",
-        "menu-7": "Volcano Toast",
         "footer-desc": "Teen style chill cafe",
         "footer-time-title": "<i class='fas fa-clock'></i> Opening Hours",
         "footer-time-desc": "Open Daily<br>16:00 - 23:00",
@@ -109,12 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.section-header, .vibe-gallery img, .menu-card');
+    const animatedElements = document.querySelectorAll('.section-header, .vibe-gallery img');
     
     animatedElements.forEach((el, index) => {
         el.classList.add('fade-up');
         
-        if (el.classList.contains('menu-card') || el.tagName.toLowerCase() === 'img') {
+        if (el.tagName.toLowerCase() === 'img') {
             const delay = (index % 4) * 0.15;
             el.style.transition = `opacity 0.8s ease-out ${delay}s, transform 0.8s ease-out ${delay}s`;
         } else {
